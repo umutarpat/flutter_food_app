@@ -19,8 +19,8 @@ class GlobalNavBar extends StatelessWidget {
           selectedIndex: _initialController.currentPage.value,
           barItems: [
             BarItem(
-              filledIcon: Icons.person,
-              outlinedIcon: Icons.person_outlined,
+              filledIcon: Icons.fastfood,
+              outlinedIcon: Icons.fastfood_outlined,
             ),
             BarItem(
                 filledIcon: Icons.favorite_rounded,
