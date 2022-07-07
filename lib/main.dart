@@ -1,11 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_food_app/firebase_options.dart';
 import 'package:flutter_food_app/global/controllers/initial_controller.dart';
 import 'package:flutter_food_app/global/themes/light_theme.dart';
 import 'package:flutter_food_app/modules/home/home_view.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   /// init permanent controller here in order to have a global unkilliable controller
   final InitialController _initialController =
