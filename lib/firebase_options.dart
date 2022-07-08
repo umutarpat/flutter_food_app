@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '572847659666',
     projectId: 'foody-4f466',
     storageBucket: 'foody-4f466.appspot.com',
-    iosClientId: '572847659666-fopa8s8ct8esfm13v2ni3sgpkobs2i73.apps.googleusercontent.com',
+    iosClientId:
+        '572847659666-fopa8s8ct8esfm13v2ni3sgpkobs2i73.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterFoodApp',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '572847659666',
     projectId: 'foody-4f466',
     storageBucket: 'foody-4f466.appspot.com',
-    iosClientId: '572847659666-fopa8s8ct8esfm13v2ni3sgpkobs2i73.apps.googleusercontent.com',
+    iosClientId:
+        '572847659666-fopa8s8ct8esfm13v2ni3sgpkobs2i73.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterFoodApp',
   );
 }
