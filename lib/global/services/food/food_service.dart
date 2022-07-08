@@ -5,9 +5,10 @@ import 'package:flutter_food_app/global/utils/logger.dart';
 Future<List<FoodCategoryModel>> getCategoriesService() async {
   final snapshot =
       await FirebaseFirestore.instance.collection('food-category').get();
-  logger(snapshot.docs.map((doc) => doc.data()));
+
   List<FoodCategoryModel> list = snapshot.docs
       .map((doc) => FoodCategoryModel.fromJson(doc.data()))
       .toList();
+
   return list;
 }

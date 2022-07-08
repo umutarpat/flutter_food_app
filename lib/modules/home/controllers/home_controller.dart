@@ -12,8 +12,6 @@ class HomeController extends GetxController {
 
   late final Future<List<FoodCategoryModel>> foodCategoryFuture;
 
-  // final foodCategoryFuture = Future.value(List<FoodCategoryModel>).obs;
-
   @override
   void onInit() {
     super.onInit();
