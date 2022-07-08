@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_food_app/firebase_options.dart';
 import 'package:flutter_food_app/global/controllers/initial_controller.dart';
 import 'package:flutter_food_app/global/themes/light_theme.dart';
+import 'package:flutter_food_app/global/utils/routes.dart';
 import 'package:flutter_food_app/modules/home/home_view.dart';
 import 'package:get/get.dart';
 
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightTheme(context),
-      home: HomeView(),
+      initialRoute: '/',
+      getPages: routes,
     );
   }
 }
