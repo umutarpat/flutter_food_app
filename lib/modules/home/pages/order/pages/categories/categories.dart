@@ -27,7 +27,9 @@ class HomeViewOrderCategories extends StatelessWidget {
                 shrinkWrap: true,
                 children: _homeController.foodCategoryData.value
                     .map((e) => GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Get.toNamed("/foods", arguments: e.foods);
+                          },
                           child: Card(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
