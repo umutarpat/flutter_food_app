@@ -28,7 +28,7 @@ class HomeViewOrderCategories extends StatelessWidget {
                 children: _homeController.foodCategoryData.value
                     .map((e) => GestureDetector(
                           onTap: () {
-                            Get.toNamed("/foods", arguments: e.foods);
+                            Get.toNamed("/foods", arguments: e);
                           },
                           child: Card(
                             child: Column(

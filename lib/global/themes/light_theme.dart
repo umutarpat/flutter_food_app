@@ -10,6 +10,8 @@ ThemeData lightTheme(BuildContext context) {
       textTheme: CupertinoTextThemeData(),
     ),
     scaffoldBackgroundColor: kBgColor,
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(primary: Colors.green)),
     textTheme: GoogleFonts.nunitoTextTheme(ThemeData.light().textTheme)
         .apply(
           bodyColor: Colors.grey,
@@ -20,6 +22,13 @@ ThemeData lightTheme(BuildContext context) {
             textStyle: ThemeData.light().textTheme.subtitle1,
             fontWeight: FontWeight.w600,
             fontSize: 20,
+            height: 1.1,
+          ),
+          button: GoogleFonts.nunito(
+            textStyle: ThemeData.light().textTheme.button,
+            fontWeight: FontWeight.w400,
+            color: Colors.white,
+            fontSize: 16,
             height: 1.1,
           ),
         ),
