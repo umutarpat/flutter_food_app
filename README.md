@@ -1,16 +1,40 @@
 # flutter_food_app
 
-A new Flutter project.
+​
+Foody is an example structural app made with GetX state management and Firebase for backend.
+​
 
-## Getting Started
+## Structure
 
-This project is a starting point for a Flutter application.
+​
+Project has support of multiple data fetching with futures using FutureBuilder [Find more here with my blog post](https://medium.com/@umutarpt/multiple-data-fetching-structure-with-future-builder-dio-and-getx-in-flutter-39f0dfaafe1)
 
-A few resources to get you started if this is your first Flutter project:
+Has MVVM pattern with using GetX controllers as View Models.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Controller creation is handled with GetPages and Bindings.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+No file has big chunks of code. Code is always nested and separated by files.
+
+Apps design is handled with themes,const variables.
+
+Folder by feature is present in the app except 'Services' and 'Models' folders.
+
+'Services' and 'Models' are in global because we may have situations where we need to use them on more than one modules.
+
+[More info about folder structure here](https://levelup.gitconnected.com/scalable-flutter-folder-structure-for-big-apps-480a9b266793)
+
+## Tools
+
+​I use GetX as state management because it is very easiy and it is like a framework more than state management. It comes handy in very tight situations.
+
+Because this is a example app I used Firebase as backend to complete the app faster. NoSQL really makes wonders.
+
+## What would I have done if this was a reall app.
+
+I would create an interceptor to log fetching information such as Response data and Request data.
+
+I would have updated the design with using Figma.
+
+I would have created more UX friendly app. Ability to let user do things more freely across the app.
+
+Plus more high level widgets would have been created.
