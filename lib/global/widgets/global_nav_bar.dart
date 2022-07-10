@@ -16,7 +16,7 @@ class GlobalNavBar extends StatelessWidget {
             _initialController.currentPage.value = index;
           },
           selectedIndex: _initialController.currentPage.value,
-          bottomPadding: 10,
+          bottomPadding: 20,
           barItems: [
             BarItem(
               filledIcon: Icons.fastfood,
