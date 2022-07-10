@@ -5,6 +5,7 @@ PreferredSizeWidget globalAppBar(BuildContext context,
   return PreferredSize(
     preferredSize: Size.fromHeight(45.0),
     child: AppBar(
+        centerTitle: true,
         title: Text(
           title,
           style: Theme.of(context)
