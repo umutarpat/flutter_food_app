@@ -8,7 +8,9 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get.dart';
 
 class HomeViewFavoritesController extends GetxController {
+  // this is for fetching multiple futures.
   final mainFuture = Future.wait([]).obs;
+  // we are creating model data variables so we can use that data in nested widgets.
   RxList<FoodModel> favoritesData = RxList();
 
   final favoritesFuture = Future.value([FoodModel()]).obs;
@@ -19,12 +21,14 @@ class HomeViewFavoritesController extends GetxController {
     updateMainFuture();
   }
 
+// We are creating a facade here in order to update getbuilder that has id named 'main' whenever we want it.
   updateMainFuture() {
     getFoods();
     mainFuture.value = Future.wait([favoritesFuture.value]);
     update(['main']);
   }
 
+// call this on body of futurebuilder in order to assign all future snapshots to data variables.
   assignFutures(List data) {
     final datas = [favoritesData];
     data.forEach((element) {
