@@ -1,3 +1,4 @@
+import 'package:flutter_food_app/modules/basket/controllers/add_controller.dart';
 import 'package:flutter_food_app/modules/basket/controllers/basket_controller.dart';
 import 'package:flutter_food_app/modules/home/controllers/add_controller.dart';
 import 'package:flutter_food_app/modules/home/controllers/home_controller.dart';
@@ -9,6 +10,8 @@ class BasketBinding implements Bindings {
   @override
   void dependencies() {
     Get.lazyPut<BasketViewBasketController>(() => BasketViewBasketController(),
+        fenix: true);
+    Get.lazyPut<BasketViewAddController>(() => BasketViewAddController(),
         fenix: true);
   }
 }
