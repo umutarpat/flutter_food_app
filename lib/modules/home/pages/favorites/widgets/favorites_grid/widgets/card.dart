@@ -52,21 +52,6 @@ class HomeViewFavoritesGridCard extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          ElevatedButton(
-              onPressed: () async {
-                _addController
-                    .addToBasket(
-                        docParentId: favorites.docParentId!,
-                        docId: favorites.docId!,
-                        basketQuantity: favorites.basketQuantity != 0 ? 0 : 1)
-                    .then((res) => _favoritesController.updateMainFuture());
-              },
-              child: Text(
-                favorites.basketQuantity != 0
-                    ? "Remove From Basket"
-                    : "Add To Basket",
-                style: Theme.of(context).textTheme.button,
-              ))
         ],
       ),
     );

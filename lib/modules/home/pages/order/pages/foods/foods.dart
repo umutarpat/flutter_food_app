@@ -19,7 +19,7 @@ class HomeViewOrderCategoriesFoods extends StatelessWidget {
           actions: [
             GestureDetector(
                 onTap: () {
-                  Get.toNamed("/basket");
+                  Get.offNamed("/basket");
                 },
                 child: Padding(
                     padding: EdgeInsets.all(8),

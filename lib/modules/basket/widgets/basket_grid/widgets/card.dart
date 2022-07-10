@@ -20,22 +20,6 @@ class BasketViewGridCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Align(
-            alignment: Alignment.topRight,
-            child: IconButton(
-                onPressed: () async {
-                  _addController
-                      .addToFavorite(
-                          docParentId: favorites.docParentId!,
-                          docId: favorites.docId!,
-                          isFavorite:
-                              favorites.isFavorite ?? true ? false : true)
-                      .then((res) => _basketController.updateMainFuture());
-                },
-                icon: Icon(favorites.isFavorite ?? false
-                    ? Icons.favorite_rounded
-                    : Icons.favorite_border_outlined)),
-          ),
           Image.network(
             favorites.imageUrl ?? '',
             width: 50,
