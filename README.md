@@ -1,12 +1,11 @@
 # flutter_food_app
 
-​
+![foody_main](https://user-images.githubusercontent.com/64107753/178158072-59248728-e6c4-4eeb-9373-df1742ca34dc.png)
+
 Foody is an example structural app made with GetX state management and Firebase for backend.
-​
 
 ## Structure
 
-​
 Project has support of multiple data fetching with futures using FutureBuilder [Find more here with my blog post](https://medium.com/@umutarpt/multiple-data-fetching-structure-with-future-builder-dio-and-getx-in-flutter-39f0dfaafe1)
 
 Has MVVM pattern with using GetX controllers as View Models.
@@ -25,7 +24,7 @@ Folder by feature is present in the app except 'Services' and 'Models' folders.
 
 ## Tools
 
-​I use GetX as state management because it is very easiy and it is like a framework more than state management. It comes handy in very tight situations.
+I use GetX as state management because it is very easiy and it is like a framework more than state management. It comes handy in very tight situations.
 
 Because this is a example app I used Firebase as backend to complete the app faster. NoSQL really makes wonders.
 
