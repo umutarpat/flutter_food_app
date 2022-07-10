@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'food.dart';
+import 'food_model.dart';
 
 part 'food_category_model.g.dart';
 
@@ -8,12 +8,11 @@ part 'food_category_model.g.dart';
 class FoodCategoryModel {
   @JsonKey(name: 'doc_id')
   String? docId;
-  List<Food>? foods;
   @JsonKey(name: 'image_url')
   String? imageUrl;
   String? name;
 
-  FoodCategoryModel({this.docId, this.foods, this.imageUrl, this.name});
+  FoodCategoryModel({this.docId, this.imageUrl, this.name});
 
   factory FoodCategoryModel.fromJson(Map<String, dynamic> json) {
     return _$FoodCategoryModelFromJson(json);

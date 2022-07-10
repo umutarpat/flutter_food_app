@@ -1,19 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'food.dart';
+part of 'food_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Food _$FoodFromJson(Map<String, dynamic> json) => Food(
+FoodModel _$FoodModelFromJson(Map<String, dynamic> json) => FoodModel(
+      docId: json['doc_id'] as String?,
       basketQuantity: json['basket_quantity'] as int?,
       imageUrl: json['image_url'] as String?,
       isFavorite: json['is_favorite'] as bool?,
       name: json['name'] as String?,
     );
 
-Map<String, dynamic> _$FoodToJson(Food instance) => <String, dynamic>{
+Map<String, dynamic> _$FoodModelToJson(FoodModel instance) => <String, dynamic>{
+      'doc_id': instance.docId,
       'basket_quantity': instance.basketQuantity,
       'image_url': instance.imageUrl,
       'is_favorite': instance.isFavorite,
