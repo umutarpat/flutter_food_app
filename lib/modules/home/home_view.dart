@@ -20,7 +20,7 @@ class HomeView extends StatelessWidget {
             actions: [
               GestureDetector(
                   onTap: () {
-                    logger("pressed");
+                    Get.toNamed("/basket");
                   },
                   child: Padding(
                       padding: EdgeInsets.all(8),

@@ -1,32 +1,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_food_app/global/models/food_category_model/food_model.dart';
-import 'package:flutter_food_app/global/models/food_category_model/food_category_model.dart';
 import 'package:flutter_food_app/global/utils/logger.dart';
 import 'package:flutter_food_app/global/widgets/global_app_bar.dart';
-import 'package:flutter_food_app/modules/home/controllers/home_controller.dart';
-import 'package:flutter_food_app/modules/home/pages/order/pages/foods/controllers/foods_controller.dart';
-import 'package:flutter_food_app/modules/home/pages/order/pages/foods/widgets/foods_grid/foods_grid.dart';
+import 'package:flutter_food_app/modules/basket/controllers/basket_controller.dart';
+import 'package:flutter_food_app/modules/basket/widgets/basket_grid/basket_grid.dart';
+import 'package:flutter_food_app/modules/home/pages/favorites/controllers/favorites_controller.dart';
+import 'package:flutter_food_app/modules/home/pages/favorites/widgets/favorites_grid/favorites_grid.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
-class HomeViewOrderCategoriesFoods extends StatelessWidget {
+class BasketView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: globalAppBar(
-          context,
-          actions: [
-            GestureDetector(
-                onTap: () {
-                  Get.toNamed("/basket");
-                },
-                child: Padding(
-                    padding: EdgeInsets.all(8),
-                    child: FaIcon(FontAwesomeIcons.basketShopping)))
-          ],
-        ),
-        body: GetBuilder<HomeViewOrderCategoriesFoodsController>(
+        appBar: globalAppBar(context, title: "Basket"),
+        body: GetBuilder<BasketViewBasketController>(
             id: 'main',
             builder: (controller) {
               return FutureBuilder(
@@ -41,7 +29,7 @@ class HomeViewOrderCategoriesFoods extends StatelessWidget {
                         return Container();
                       }
                       controller.assignFutures((snapshot.data! as List));
-                      return HomeViewOrderCategoriesFoodsGrid();
+                      return BasketViewGrid();
                     default:
                       return const Center(child: CircularProgressIndicator());
                   }

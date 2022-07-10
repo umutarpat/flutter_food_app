@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 PreferredSizeWidget globalAppBar(BuildContext context,
-    {List<Widget>? actions}) {
+    {List<Widget>? actions, String title = "Foody"}) {
   return PreferredSize(
     preferredSize: Size.fromHeight(45.0),
     child: AppBar(
         title: Text(
-          "Foody",
+          title,
           style: Theme.of(context)
               .textTheme
               .subtitle1!

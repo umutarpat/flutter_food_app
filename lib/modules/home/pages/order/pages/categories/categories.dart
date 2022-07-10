@@ -30,6 +30,7 @@ class HomeViewOrderCategories extends StatelessWidget {
                     children: controller.foodCategoryData.value
                         .map((e) => GestureDetector(
                               onTap: () {
+                                /// send docId so that foods service can catch it with Get.parameters['id']
                                 Get.toNamed("/foods",
                                     parameters: {'id': e.docId ?? ''});
                               },

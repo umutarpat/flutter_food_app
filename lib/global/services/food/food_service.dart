@@ -52,3 +52,20 @@ Future<List<FoodModel>> getFavoriteFoodsService() async {
 
   return list;
 }
+
+Future<List<FoodModel>> getBasketFoodsService() async {
+  final snapshot = await FirebaseFirestore.instance
+      .collectionGroup("foods")
+      .where("basket_quantity", isEqualTo: 1)
+      .get();
+
+  List<FoodModel> list = snapshot.docs
+      .map((doc) => FoodModel.fromJson(doc.data()
+        ..addAll({
+          "doc_id": doc.id,
+          "doc_parent_id": doc.reference.parent.parent!.id
+        })))
+      .toList();
+
+  return list;
+}
