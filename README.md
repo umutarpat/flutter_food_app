@@ -1,6 +1,6 @@
 # flutter_food_app
 
-<img src="https://user-images.githubusercontent.com/64107753/178158072-59248728-e6c4-4eeb-9373-df1742ca34dc.png" width="500" height="500">
+<img src="https://user-images.githubusercontent.com/64107753/178158072-59248728-e6c4-4eeb-9373-df1742ca34dc.png">
 
 Foody is an example structural app made with GetX state management and Firebase for backend.
 
