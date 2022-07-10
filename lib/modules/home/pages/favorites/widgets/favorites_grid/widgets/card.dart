@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_app/global/models/food_category_model/food_model.dart';
 import 'package:flutter_food_app/global/utils/logger.dart';
+import 'package:flutter_food_app/modules/home/controllers/add_controller.dart';
 import 'package:flutter_food_app/modules/home/pages/favorites/controllers/favorites_controller.dart';
 import 'package:flutter_food_app/modules/home/pages/order/pages/foods/controllers/foods_controller.dart';
 import 'package:get/get.dart';
@@ -10,6 +11,7 @@ class HomeViewFavoritesGridCard extends StatelessWidget {
   FoodModel favorites;
   HomeViewFavoritesGridCard(this.favorites);
   final HomeViewFavoritesController _favoritesController = Get.find();
+  final HomeAddController _addController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -23,15 +25,13 @@ class HomeViewFavoritesGridCard extends StatelessWidget {
             alignment: Alignment.topRight,
             child: IconButton(
                 onPressed: () async {
-                  FirebaseFirestore.instance
-                      .collection('food-category')
-                      // category doc id
-                      .doc(favorites.docParentId)
-                      .collection("foods")
-                      .doc(favorites.docId)
-                      .update({
-                    "is_favorite": favorites.isFavorite ?? true ? false : true
-                  }).then((res) => _favoritesController.updateMainFuture());
+                  _addController
+                      .addToFavorite(
+                          docParentId: favorites.docParentId!,
+                          docId: favorites.docId!,
+                          isFavorite:
+                              favorites.isFavorite ?? true ? false : true)
+                      .then((res) => _favoritesController.updateMainFuture());
                 },
                 icon: Icon(favorites.isFavorite ?? false
                     ? Icons.favorite_rounded
@@ -54,15 +54,12 @@ class HomeViewFavoritesGridCard extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: () async {
-                FirebaseFirestore.instance
-                    .collection('food-category')
-                    // category doc id
-                    .doc(favorites.docParentId)
-                    .collection("foods")
-                    .doc(favorites.docId)
-                    .update({
-                  "basket_quantity": favorites.basketQuantity != 0 ? 0 : 1
-                }).then((res) => _favoritesController.updateMainFuture());
+                _addController
+                    .addToBasket(
+                        docParentId: favorites.docParentId!,
+                        docId: favorites.docId!,
+                        basketQuantity: favorites.basketQuantity != 0 ? 0 : 1)
+                    .then((res) => _favoritesController.updateMainFuture());
               },
               child: Text(
                 favorites.basketQuantity != 0
