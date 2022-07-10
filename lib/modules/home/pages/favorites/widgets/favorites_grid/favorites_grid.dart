@@ -2,9 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_app/global/utils/logger.dart';
 import 'package:flutter_food_app/modules/home/pages/favorites/controllers/favorites_controller.dart';
-import 'package:flutter_food_app/modules/home/pages/favorites/widgets/foods_grid/widgets/card.dart';
-import 'package:flutter_food_app/modules/home/pages/order/pages/foods/controllers/foods_controller.dart';
-import 'package:flutter_food_app/modules/home/pages/order/pages/foods/widgets/foods_grid/widgets/card.dart';
+import 'package:flutter_food_app/modules/home/pages/favorites/widgets/favorites_grid/widgets/card.dart';
 import 'package:get/get.dart';
 
 class HomeViewFavoritesGrid extends StatelessWidget {

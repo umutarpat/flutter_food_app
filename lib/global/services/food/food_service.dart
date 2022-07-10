@@ -26,7 +26,11 @@ Future<List<FoodModel>> getFoodsService() async {
       .get();
 
   List<FoodModel> list = snapshot.docs
-      .map((doc) => FoodModel.fromJson(doc.data()..addAll({"doc_id": doc.id})))
+      .map((doc) => FoodModel.fromJson(doc.data()
+        ..addAll({
+          "doc_id": doc.id,
+          "doc_parent_id": doc.reference.parent.parent!.id
+        })))
       .toList();
 
   return list;
@@ -39,7 +43,11 @@ Future<List<FoodModel>> getFavoriteFoodsService() async {
       .get();
 
   List<FoodModel> list = snapshot.docs
-      .map((doc) => FoodModel.fromJson(doc.data()..addAll({"doc_id": doc.id})))
+      .map((doc) => FoodModel.fromJson(doc.data()
+        ..addAll({
+          "doc_id": doc.id,
+          "doc_parent_id": doc.reference.parent.parent!.id
+        })))
       .toList();
 
   return list;

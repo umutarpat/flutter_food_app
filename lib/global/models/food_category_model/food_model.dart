@@ -6,7 +6,8 @@ part 'food_model.g.dart';
 class FoodModel {
   @JsonKey(name: 'doc_id')
   String? docId;
-
+  @JsonKey(name: 'doc_parent_id')
+  String? docParentId;
   @JsonKey(name: 'basket_quantity')
   int? basketQuantity;
   @JsonKey(name: 'image_url')
@@ -17,6 +18,7 @@ class FoodModel {
 
   FoodModel(
       {this.docId,
+      this.docParentId,
       this.basketQuantity,
       this.imageUrl,
       this.isFavorite,

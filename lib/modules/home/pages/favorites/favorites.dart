@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_app/global/utils/logger.dart';
 import 'package:flutter_food_app/modules/home/pages/favorites/controllers/favorites_controller.dart';
-import 'package:flutter_food_app/modules/home/pages/favorites/widgets/foods_grid/favorites_grid.dart';
+import 'package:flutter_food_app/modules/home/pages/favorites/widgets/favorites_grid/favorites_grid.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 

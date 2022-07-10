@@ -26,7 +26,7 @@ class HomeViewFavoritesGridCard extends StatelessWidget {
                   FirebaseFirestore.instance
                       .collection('food-category')
                       // category doc id
-                      .doc(Get.parameters['id'])
+                      .doc(favorites.docParentId)
                       .collection("foods")
                       .doc(favorites.docId)
                       .update({
@@ -57,7 +57,7 @@ class HomeViewFavoritesGridCard extends StatelessWidget {
                 FirebaseFirestore.instance
                     .collection('food-category')
                     // category doc id
-                    .doc(Get.parameters['id'])
+                    .doc(favorites.docParentId)
                     .collection("foods")
                     .doc(favorites.docId)
                     .update({
