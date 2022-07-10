@@ -52,9 +52,21 @@ class HomeViewOrderCategoriesFoodsGridCard extends StatelessWidget {
             height: 10,
           ),
           ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                FirebaseFirestore.instance
+                    .collection('food-category')
+                    // category doc id
+                    .doc(Get.parameters['id'])
+                    .collection("foods")
+                    .doc(food.docId)
+                    .update({
+                  "basket_quantity": food.basketQuantity != 0 ? 0 : 1
+                }).then((res) => _foodsController.updateMainFuture());
+              },
               child: Text(
-                "Add To Cart",
+                food.basketQuantity != 0
+                    ? "Remove From Basket"
+                    : "Add To Basket",
                 style: Theme.of(context).textTheme.button,
               ))
         ],
