@@ -10,8 +10,10 @@ ThemeData lightTheme(BuildContext context) {
       textTheme: CupertinoTextThemeData(),
     ),
     scaffoldBackgroundColor: kBgColor,
+    appBarTheme: AppBarTheme(backgroundColor: kPrimaryColor),
     elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(primary: Colors.green)),
+        style: ElevatedButton.styleFrom(primary: Colors.orangeAccent)),
+    iconTheme: IconThemeData(color: kPrimaryColor),
     textTheme: GoogleFonts.nunitoTextTheme(ThemeData.light().textTheme)
         .apply(
           bodyColor: Colors.grey,

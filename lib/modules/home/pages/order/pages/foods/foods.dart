@@ -4,7 +4,7 @@ import 'package:flutter_food_app/global/models/food_category_model/food_model.da
 import 'package:flutter_food_app/global/models/food_category_model/food_category_model.dart';
 import 'package:flutter_food_app/global/utils/logger.dart';
 import 'package:flutter_food_app/global/widgets/global_app_bar.dart';
-import 'package:flutter_food_app/modules/home/controllers/home_controller.dart';
+import 'package:flutter_food_app/modules/home/pages/order/pages/categories/controllers/home_controller.dart';
 import 'package:flutter_food_app/modules/home/pages/order/pages/foods/controllers/foods_controller.dart';
 import 'package:flutter_food_app/modules/home/pages/order/pages/foods/widgets/foods_grid/foods_grid.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

@@ -12,7 +12,6 @@ class GlobalNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() => WaterDropNavBar(
-          backgroundColor: Colors.white,
           onItemSelected: (index) {
             _initialController.currentPage.value = index;
           },

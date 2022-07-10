@@ -6,7 +6,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class HomeViewOrderCategoriesController extends GetxController {
   final mainFuture = Future.wait([]).obs;
   RxList<FoodCategoryModel> foodCategoryData = RxList();
 
